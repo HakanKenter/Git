@@ -43,6 +43,7 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed fuga officiis sint sequi fugiat quaerat hic in, atque non ipsa, suscipit tenetur? Iste, similique enim? Voluptatem modi fuga minima quae?</p>
     </div>
 
 

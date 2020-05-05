@@ -1,0 +1,260 @@
+/******************************************************************************************************/
+
+Résultats de recherche
+Extrait optimisé sur le Web
+Allez à: Panneau de configuration -> Comptes d'utilisateurs -> Gérez vos informations d'identification -> 
+Informations d'identification Windows -> sous Informations d'identification
+ génériques, vous trouverez des informations d'identification associées à Github, cliquez dessus, puis sur "Supprimer".
+
+
+/*****************************************************************************************************/
+
+A partir du dossier Git, clicck droit et lancement de git:
+
+/******************************************************************************************************/
+
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git
+$ git init
+Initialized empty Git repository in C:/xampp/htdocs/Git/.git/
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (master)
+$ git config -- global user.name 'Hakan Kenter'
+error: key does not contain a section: global
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (master)
+$ git config --global user.name 'Hakan Kenter'
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (master)
+$ git config --global user.email 'hakan.kt@outlook.fr'
+
+/***************************************************
+
+Ensuite creer un repository sur github et copier ce code et coller:
+
+/***************************************************
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (master)
+$ git remote add origin https://github.com/HakanKenter/Git.git
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (master)
+$ git add --all
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (master)
+$ git commit -m" Première version du projet"
+[master (root-commit) 027a076]  Première version du projet
+ 2 files changed, 16 insertions(+)
+ create mode 100644 git_cours.txt
+ create mode 100644 index.php
+
+
+/************************************************************************/
+
+$ git status
+On branch ajout_paragraphe
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   git_cours.txt
+        modified:   index.php
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    git_cours.txt
+
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_paragraphe)
+$ git deff
+git: 'deff' is not a git command. See 'git --help'.
+
+The most similar command is
+        diff
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_paragraphe)
+$ git diff
+diff --git a/git_cours.txt b/git_cours.txt
+deleted file mode 100644
+index 2fde79e..0000000
+--- a/git_cours.txt
++++ /dev/null
+@@ -1,49 +0,0 @@
+-/******************************************************************************************************/
+-
+-Résultats de recherche
+-Extrait optimisé sur le Web
+-Allez à: Panneau de configuration -> Comptes d'utilisateurs -> Gérez vos informations d'identification ->
+-Informations d'identification Windows -> sous Informations d'identification
+- génériques, vous trouverez des informations d'identification associées à Github, cliquez dessus, puis sur "Supprimer".
+-
+-
+-/*****************************************************************************************************/
+-
+-A partir du dossier Git, clicck droit et lancement de git:
+-
+
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_paragraphe)
+$
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_paragraphe)
+$ git add -all
+error: did you mean `--all` (with two dashes ?)
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_paragraphe)
+$ git add --all
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_paragraphe)
+$ git commit -m "Modification de index.php"
+[ajout_paragraphe 65b6af9] Modification de index.php
+ 2 files changed, 8 insertions(+)
+ delete mode 100644 git_cours.txt
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_paragraphe)
+$ git branch
+* ajout_paragraphe
+  master
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_paragraphe)
+$ git push origin ajout_paragraphe
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 773 bytes | 773.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'ajout_paragraphe' on GitHub by visiting:
+remote:      https://github.com/HakanKenter/Git/pull/new/ajout_paragraphe
+remote:
+To https://github.com/HakanKenter/Git.git
+ * [new branch]      ajout_paragraphe -> ajout_paragraphe
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_paragraphe)
+$ git statut
+git: 'statut' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_paragraphe)
+$ git status
+On branch ajout_paragraphe
+nothing to commit, working tree clean
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_paragraphe)
+$ git diff
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_paragraphe)
+$ git diff
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_paragraphe)
+$ git pull origin ajout_paragraphe
+From https://github.com/HakanKenter/Git
+ * branch            ajout_paragraphe -> FETCH_HEAD
+Already up to date.
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_paragraphe)
+$ git diff
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_paragraphe)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (master)
+$ git checkout ajout_paragraphe
+Switched to branch 'ajout_paragraphe'
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_paragraphe)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (master)
+$ git branch -D ajout_paragraphe
+Deleted branch ajout_paragraphe (was 65b6af9).
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (master)
+$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/HakanKenter/Git
+ * branch            master     -> FETCH_HEAD
+   027a076..a668ca9  master     -> origin/master
+Updating 027a076..a668ca9
+Fast-forward
+ git_cours.txt | 0
+ index.php     | 8 ++++++++
+ 2 files changed, 8 insertions(+)
+ delete mode 100644 git_cours.txt
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (master)
+$ git branch ajout_caroussel
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (master)
+$ git checkout ajout_caroussel
+Switched to branch 'ajout_caroussel'
+M       index.php
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_caroussel)
+$ git diff
+diff --git a/index.php b/index.php
+index a32140d..853da54 100644
+--- a/index.php
++++ b/index.php
+@@ -17,8 +17,37 @@
+
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, sapiente harum tempora rerum excepturi eaque quae accusamus praesentium ex pariatur vel assumenda, earum cupiditate deleniti repudiandae minus nisi suscipit natus.</p>
+
++        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
++            <ol class="carousel-indicators">
++                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
++                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
++                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
++            </ol>
++            <div class="carousel-inner">
++                <div class="carousel-item active">
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_caroussel)
+$ git add --all
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_caroussel)
+$ git commit -m 'modif 2 sur inex.php'
+[ajout_caroussel 71b42b9] modif 2 sur inex.php
+ 1 file changed, 30 insertions(+), 1 deletion(-)
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_caroussel)
+$ git push origin master
+Everything up-to-date
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_caroussel)
+$ git push origin ajout_caroussel
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.28 KiB | 657.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'ajout_caroussel' on GitHub by visiting:
+remote:      https://github.com/HakanKenter/Git/pull/new/ajout_caroussel
+remote:
+To https://github.com/HakanKenter/Git.git
+ * [new branch]      ajout_caroussel -> ajout_caroussel
+
+MSI@DESKTOP-2P10P48 MINGW64 /c/xampp/htdocs/Git (ajout_caroussel)
+$
+
+
